@@ -50,14 +50,17 @@ numbers.forEach(items => {
 
 // 7. Vypište do stránky jak daleko je každé číslo v seznamu od čísla 5.
 document.body.innerHTML += `<p>7. úkol:</p>`
-numbers.forEach(item => {
-    numbers.reverse  
+const vzdalenost = numbers.map(function(items) {
+    return Math.abs(items - 5)
 })
-document.body.innerHTML += `nevim`
+document.body.innerHTML += ` ${(vzdalenost)}`
 
 // 8. Vypište do stránky druhé mocnicny vzdáleností všech čísel od čísla 5.
 document.body.innerHTML += `<p>8. úkol:</p>`
-document.body.innerHTML += `nevim`
+const vzdalenost2 = numbers.map(function(items) {
+    return ((items - 5) * (items - 5))
+})
+document.body.innerHTML += ` ${(vzdalenost2)}`
 
 // 9. Spočítejte, kolik je v seznamu záporných čísel.
 document.body.innerHTML += `<p>9. úkol:</p>`
@@ -70,14 +73,18 @@ numbers.forEach(items => {
 document.body.innerHTML += pocitadlo
 
 // 10. Spočítejte soucet všech čísel v poli.
+document.body.innerHTML += `<p>10. úkol:</p>`
+let soucet = 0
+numbers.forEach(items => {
+soucet += items })
+document.body.innerHTML += `${soucet}`
+
 
 // 11. Spočítejte průměr všech čísel v poli.
-/*
 document.body.innerHTML += `<p>11. úkol:</p>`
 const pocetPozic = numbers.length + 1
-
-document.body.innerHTML += 
-*/
+let prumer = soucet / pocetPozic
+document.body.innerHTML += `${prumer}`
 
 // 12. Spočítejte součet všech kladných čísel v poli.
 document.body.innerHTML += `<p>12. úkol:</p>`
