@@ -82,16 +82,21 @@ document.body.innerHTML += `${soucet}`
 
 // 11. Spočítejte průměr všech čísel v poli.
 document.body.innerHTML += `<p>11. úkol:</p>`
-const pocetPozic = numbers.length + 1
+const pocetPozic = numbers.length
 let prumer = soucet / pocetPozic
 document.body.innerHTML += `${prumer}`
 
 // 12. Spočítejte součet všech kladných čísel v poli.
 document.body.innerHTML += `<p>12. úkol:</p>`
-let pocitadlo2 = 0
-numbers.forEach(items => {
-    if (items > 0) {
-        pocitadlo2++
+
+const kladnePole = numbers.map(item => {
+    if (item > 0) {
+        return item
     }
-         else{} })
-document.body.innerHTML += pocitadlo2
+})
+
+let soucetKladnych = 0
+kladnePole.forEach(item => {
+    if (item != undefined) {
+    soucetKladnych += item }})
+document.body.innerHTML += `${soucetKladnych}`
